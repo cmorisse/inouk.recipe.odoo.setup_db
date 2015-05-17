@@ -1,0 +1,14 @@
+*.pyc
+*.pyo
+*.swp
+*.egg-info
+build
+dist
+.installed.cfg
+bin
+develop-eggs
+lib
+parts
+var
+py27/
+.idea/
