@@ -8,6 +8,8 @@ abort if launched without a existing database. setup_db fills this
 gap by creating a database with correct owner after backing up any
 existing database.
 
+setup_db uses Odoo internal to manipulate databases, so it takes care of data dir content.
+
 Installation
 ============
 
