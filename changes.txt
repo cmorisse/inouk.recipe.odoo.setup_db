@@ -1,4 +1,10 @@
 =====
+0.1.1
+=====
+
+- Create an empty database so that upgrade.py can detect it and launch init mode
+
+=====
 0.1.0
 =====
 

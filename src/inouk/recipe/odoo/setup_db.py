@@ -10,7 +10,7 @@ import sys
 import argparse
 import subprocess
 import openerp
-from openerp.service.db import exp_drop, exp_create_database, exp_list, exp_rename
+from openerp.service.db import exp_drop, exp_create_database, exp_list, exp_rename, _create_empty_database
 
 
 def get_current_git_tag():
@@ -58,7 +58,7 @@ def copy_existing_database(session, args):
 
 
 def create_database(session, args):
-    exp_create_database(args.db_name, args.demo, args.lang, user_password=args.password)
+    _create_empty_database(args.db_name)
     return
 
 
