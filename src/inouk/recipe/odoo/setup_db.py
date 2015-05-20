@@ -21,13 +21,14 @@ def get_current_git_tag():
     :rtype: str
     """
     try:
-        tag = subprocess.check_output(['git', 'describe'])
+        tag = subprocess.check_output(['git', 'describe'], stderr=subprocess.STDOUT)
+
     except:
         try:
-            tag = subprocess.check_output(['git', 'show', '-s', '--pretty=format:%h'])
+            tag = subprocess.check_output(['git', 'show', '-s', '--pretty=format:%h'], stderr=subprocess.STDOUT)
         except:
             tag = ''
-    return tag
+    return tag.split('\n')[0]
 
 
 def copy_existing_database(session, args):
